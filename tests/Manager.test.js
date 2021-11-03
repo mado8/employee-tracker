@@ -44,7 +44,7 @@ describe("Manager", () => {
     })
 
     it("Should return an office number when property is inputted", () => {
-        const object = new Intern('ben', 8, 'ben@gmail.com', 225);
+        const object = new Manager('ben', 8, 'ben@gmail.com', 225);
         expect(object.office).toBe(225);
     });  
 })

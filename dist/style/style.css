@@ -1,0 +1,109 @@
+:root {
+    
+
+    /* spring theme */
+    /* --navbar-color: #9ebd94;
+    --manager-card-color: #79a56f;
+    --engineer-card-color: #7fa189;
+    --intern-card-color: #acce90; */
+
+    /* summer theme */
+    --navbar-color: #f3d47e;
+    --manager-card-color: #e2b561;
+    --engineer-card-color: #e4bc81;
+    --intern-card-color: #fae097;
+
+    /* fall theme */
+    /* --navbar-color: #86503fee;
+    --manager-card-color: #bb6b53e0;
+    --engineer-card-color: #cf9573;
+    --intern-card-color: #e4b887; */
+    
+    /* winter theme */
+    /* --navbar-color: #273e7c;
+    --manager-card-color: #647bc0;
+    --engineer-card-color: #5f97e0;
+    --intern-card-color: #7a6ead; */
+}
+
+* {
+    font-family: 'Abel', sans-serif;
+    
+}
+
+body {
+    min-height: 500px;
+}
+
+.navbar {
+    background-color: var(--navbar-color);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: .5s;
+    height: 150px;
+    z-index: 500;
+}
+
+.navbar-scroll {
+    height: 70px;
+    transition: .5s;
+    opacity: 75%;
+}
+
+.navbar-text {
+    text-align: center;
+    font-size: 2em;
+}
+
+#header-title {
+    font-size: 4vh;
+}
+
+#card-containers {
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 30px;
+    padding-top: 175px; 
+}
+
+.employee-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
+
+.card {
+    background-color: #f3f1f1;
+    border-radius: 8px;
+    border: none;
+}
+
+.card-title {
+    background-color: var(--manager-card-color);
+    color: white;
+    padding: 20px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.sample-engineer {
+    background-color: var(--engineer-card-color);
+}
+
+.sample-intern {
+    background-color: var(--intern-card-color);
+}
+
+.card-text {
+    background-color: rgb(245, 246, 250);
+    box-shadow: #cdcfd6 3px 5px;
+    padding: 10px;
+}
+
