@@ -2,16 +2,16 @@
     
 
     /* spring theme */
-    /* --navbar-color: #9ebd94;
+    --navbar-color: #9ebd94;
     --manager-card-color: #79a56f;
     --engineer-card-color: #7fa189;
-    --intern-card-color: #acce90; */
+    --intern-card-color: #acce90;
 
     /* summer theme */
-    --navbar-color: #f3d47e;
+    /* --navbar-color: #f3d47e;
     --manager-card-color: #e2b561;
     --engineer-card-color: #e4bc81;
-    --intern-card-color: #fae097;
+    --intern-card-color: #fae097; */
 
     /* fall theme */
     /* --navbar-color: #86503fee;
@@ -87,17 +87,20 @@ body {
 }
 
 .card-title {
-    background-color: var(--manager-card-color);
     color: white;
     padding: 20px;
     border-radius: 6px 6px 0px 0px;
 }
 
-.sample-engineer {
+.manager {
+    background-color: var(--manager-card-color);
+}
+
+.engineer {
     background-color: var(--engineer-card-color);
 }
 
-.sample-intern {
+.intern {
     background-color: var(--intern-card-color);
 }
 
