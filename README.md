@@ -5,12 +5,19 @@ A employee tracker to input individuals into a prompt and generate an HTML with 
 This application is a tool to keep track of employees, and to make important information pertaining to their role accessible for easy access. This app can generate an html with employee information upon answering a series of questions in the terminal. 
 
 ## Table of Contents
+
 [ Description. ](#Description)
+
 [ Installation. ](#Installation)
+
 [ Usage. ](#Usage)
+
 [ Contribute. ](#Contribute)
+
 [ Tests. ](#Tests)
+
 [ Questions. ](#Questions)
+
 
 ## Installation
 To install, clone the repository and open with prefered editor. You will need some additional packages, so within your terminal type "npm i" to install all dependencies from package.json file. From there, you can launch the app by following usage instructions. 
@@ -27,5 +34,8 @@ https://user-images.githubusercontent.com/88465484/141018722-9856a8cb-d9b0-46d2-
 This project is licensed under MIT.  
 
 ## Questions
+
 Visit my other projects at https://github.com/mado8
+
 Contact me at madelineadonley@gmail.com !
+
