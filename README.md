@@ -1,5 +1,5 @@
-# employee-tracker
-A employee tracker to input individuals into a prompt and generate an HTML with their information.
+# Employee Tracker
+A employee tracker to input individuals into a prompt and generate an HTML with their information using node.js.
     
 ## Description
 This application is a tool to keep track of employees, and to make important information pertaining to their role accessible for easy access. This app can generate an html with employee information upon answering a series of questions in the terminal. 
