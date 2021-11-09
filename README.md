@@ -6,12 +6,12 @@ This application is a tool to keep track of employees, and to make important inf
 
 ## Table of Contents
 
-- [ Description. ](#Description)</br>
-- [ Installation. ](#Installation)</br>
-- [ Usage. ](#Usage)</br>
-- [ Tests. ](#Tests)</br>
-- [ License . ](#License )</br>
-- [ Questions. ](#Questions)</br>
+- [ Description ](#Description)</br>
+- [ Installation ](#Installation)</br>
+- [ Usage ](#Usage)</br>
+- [ Tests ](#Tests)</br>
+- [ License ](#License )</br>
+- [ Questions ](#Questions)</br>
 
 
 ## Installation
