@@ -6,12 +6,12 @@ This application is a tool to keep track of employees, and to make important inf
 
 ## Table of Contents
 
-[ Description. ](#Description)</br>
-[ Installation. ](#Installation)</br>
-[ Usage. ](#Usage)</br>
-[ Contribute. ](#Contribute)</br>
-[ Tests. ](#Tests)</br>
-[ Questions. ](#Questions)</br>
+- [ Description. ](#Description)</br>
+- [ Installation. ](#Installation)</br>
+- [ Usage. ](#Usage)</br>
+- [ Contribute. ](#Contribute)</br>
+- [ Tests. ](#Tests)</br>
+- [ Questions. ](#Questions)</br>
 
 
 ## Installation
@@ -30,7 +30,6 @@ This project is licensed under MIT.
 
 ## Questions
 
-Visit my other projects at https://github.com/mado8
-
-Contact me at madelineadonley@gmail.com !
+Visit my other projects at https://github.com/mado8 </br>
+Contact me at madelineadonley@gmail.com ! </br>
 
