@@ -16,6 +16,7 @@ This application is a tool to keep track of employees, and to make important inf
 
 ## Installation
 To install, clone the repository and open with prefered editor. You will need some additional packages, so within your terminal type "npm i" to install all dependencies from package.json file. From there, you can launch the app by following usage instructions. 
+
 https://user-images.githubusercontent.com/88465484/141022017-00d6c423-ba55-4f34-b364-b298e74621d3.mov
 
 ## Usage
@@ -23,6 +24,7 @@ To launch the app, navigate to index.js within the terminal and type "node index
 
 
 ## Tests 
+
 https://user-images.githubusercontent.com/88465484/141018722-9856a8cb-d9b0-46d2-aeda-e0c4fb33725c.mov
 
 ## License 
