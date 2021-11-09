@@ -9,8 +9,8 @@ This application is a tool to keep track of employees, and to make important inf
 - [ Description. ](#Description)</br>
 - [ Installation. ](#Installation)</br>
 - [ Usage. ](#Usage)</br>
-- [ Contribute. ](#Contribute)</br>
 - [ Tests. ](#Tests)</br>
+- [ License . ](#License )</br>
 - [ Questions. ](#Questions)</br>
 
 
