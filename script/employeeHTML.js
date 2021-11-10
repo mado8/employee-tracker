@@ -1,57 +1,57 @@
 const fs = require('fs')
-var html = '';
+var html;
 
 var roleHTML = (myEmployees) => {
     myEmployees.forEach(object => {
-        html += `<div id="card-containers">
-        <div class="row">
+
+        var fullName = object.getName().toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+
+        html += `
             <div class="col-sm-4 employee-card">
-            <div class="card">
-                <div class="card-body">
-                `
+              <div class="card">
+                <div class="card-body">`
         if(object.getRole() === 'Manager') {
             html += `
                     <div class="card-title manager">
-                        <h5>${object.name}</h5>
+                        <h5>${fullName}</h5>
                         <p>${object.getRole()}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.id}</p>
-                    <p class="card-text">Email: ${object.email}</p>
-                    <p class="card-text">Office #: ${object.office}</p>
+                    <p class="card-text">ID: ${object.getId()}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
+                    <p class="card-text">Office #: ${object.getOffice()}</p>
                 </div>
-            </div>
+              </div>
             </div>`
         } else if(object.getRole() === 'Engineer') {
             html += `
                     <div class="card-title engineer">
-                        <h5>${object.name}</h5>
+                        <h5>${fullName}</h5>
                         <p>${object.getRole()}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.id}</p>
-                    <p class="card-text">Email: ${object.email}</p>
-                    <p class="card-text">Github: ${object.github}</p>
+                    <p class="card-text">ID: ${object.getId()}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
+                    <p class="card-text">Github: <a class="link" href="https://github.com/${object.getGithub()}" target="_blank">${object.getGithub()}</a></p>
                 </div>
-            </div>
+              </div>
             </div>`
         } else if(object.getRole() === 'Intern') {
             html += `
                     <div class="card-title intern">
-                        <h5>${object.name}</h5>
+                        <h5>${fullName}</h5>
                         <p>${object.getRole()}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.id}</p>
-                    <p class="card-text">Email: ${object.email}</p>
-                    <p class="card-text">School: ${object.school}</p>
+                    <p class="card-text">ID: ${object.getId()}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
+                    <p class="card-text">School: ${object.getSchool()}</p>
                 </div>
-            </div>
+              </div>
             </div>`
         }
     })
 }
 
-
-
 var baseHTML = (myEmployees) => {
+
     html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -64,14 +64,17 @@ var baseHTML = (myEmployees) => {
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./style/style.css">
-        <title>Document</title>
+        <title>My Team</title>
     </head>
     <body>
         <nav class="navbar" id="nav-sticky">
             <span class="navbar-text">
             my ✩ team
             </span>
-        </nav>`;
+        </nav>
+        
+        <div id="card-containers">
+          <div class="row">`;
 
     roleHTML(myEmployees);
 
@@ -88,7 +91,5 @@ var baseHTML = (myEmployees) => {
 
     fs.writeFileSync('./dist/index.html', html);
 }
-
-
 
 module.exports = baseHTML;

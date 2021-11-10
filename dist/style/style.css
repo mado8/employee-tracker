@@ -105,8 +105,18 @@ body {
 }
 
 .card-text {
+    font-weight: 550;
     background-color: rgb(245, 246, 250);
     box-shadow: #cdcfd6 3px 5px;
     padding: 10px;
+}
+
+.card-text a {
+    color: black;
+}
+
+.link:hover {
+    color: rgb(152, 156, 164);
+    transition: 0.3s;
 }
 

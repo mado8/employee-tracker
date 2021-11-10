@@ -1,28 +1,23 @@
 // import classes and html generator js file
+const fs = require('fs')
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
-const createHTML = require('./employeeHTML');
+const createHTML = require('./script/employeeHTML');
+const myEmployees = require('./script/employee-array');
+console.log(myEmployees);
+
 // import inquirer
 const inquirer = require('inquirer');
-// set empty array to add employees to
-var myEmployees = [];
 
-// email validation code -->
-
-// validate(value) {
-//     const pass = value.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
-//       if (pass) {
-//         return true;
-//       }
-//       return 'Please enter a valid email';
+// prompts 
 
 const buildTeam = [
     {
       type: 'list',
       name: 'team',
       message: 'Build my ✩ team?',
-      choices: ['✩ build my team! ✩', '✩ no thanks! ✩'],
+      choices: ['✩ build a new team! ✩', '✩ continue building team ✩', '✩ no thanks! ✩'],
     },
 ];
 
@@ -59,7 +54,15 @@ const employeeInfo = [
         type: 'input', 
         name: 'email',
         message: 'Enter employee\'s email. ',
-      },    
+        validate(value) {
+            const pass = value.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+            if (pass) {
+                return true;
+            }
+            console.log("\x1b[31m", '\n\n Please enter a valid email');
+            employeeInfo[2];
+        },
+      },
 ];
 
 const managerInfo = [
@@ -100,7 +103,7 @@ function internInfoPrompt() {
     inquirer.prompt(internInfo).then((answers) => {
         // invoke manager class with inputs
         myIntern = new Intern(answers.name, answers.id, answers.email, answers.school);
-        myEmployees.push(myIntern)
+        myEmployees.push(myIntern);
         // prompt myTeam/continue function
         myTeamPrompt();
     }).catch((error) => {
@@ -156,6 +159,7 @@ function myTeamPrompt() {
             chooseRolePrompt()
         } else {
             createHTML(myEmployees);
+            fs.writeFileSync('./data/employee-data.json', JSON.stringify(myEmployees, null, 4))
             console.log('Your ✩ team has been built! See index.html to view your personalized page.')
             return; 
         }
@@ -167,9 +171,11 @@ function myTeamPrompt() {
 // prompt to initialize team building prompts when 'node index.js' is executed.
 function buildTeamPrompt() {
     inquirer.prompt(buildTeam).then((answers) => {
-        if(answers.team === '✩ build my team! ✩') {
-            employeeArray = [];
+        if(answers.team === '✩ build a new team! ✩') {
+            fs.writeFile('./data/employee-data.json', '')
             chooseRolePrompt()
+        } else if (answers.team === '✩ continue building team ✩'){
+            chooseRolePrompt();
         } else {
             return;
         }
