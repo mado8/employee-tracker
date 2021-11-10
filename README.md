@@ -7,12 +7,16 @@ This application is a tool to keep track of employees, and to make important inf
 ## Table of Contents
 
 - [ Description ](#Description)</br>
+- [ Webpage ](#Webpage)</br>
 - [ Installation ](#Installation)</br>
 - [ Usage ](#Usage)</br>
 - [ Tests ](#Tests)</br>
 - [ License ](#License )</br>
 - [ Questions ](#Questions)</br>
 
+## Webpage
+
+https://user-images.githubusercontent.com/88465484/141056550-51c124ed-c91c-4b25-a011-8721dc6b7680.mov
 
 ## Installation
 To install, clone the repository and open with prefered editor. You will need some additional packages, so within your terminal type "npm i" to install all dependencies from package.json file. Additionally, inquirer may need to be installed for usage. Type "npm i inquirer" in your terminal. From there, you can launch the app by following usage instructions.
