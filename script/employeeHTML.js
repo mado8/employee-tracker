@@ -4,45 +4,46 @@ var html;
 var roleHTML = (myEmployees) => {
     myEmployees.forEach(object => {
 
-        var fullName = object.getName().toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+        var capitolizedName = object.name.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
 
         html += `
             <div class="col-sm-4 employee-card">
               <div class="card">
                 <div class="card-body">`
-        if(object.getRole() === 'Manager') {
+        if(object.role === 'Manager') {
             html += `
                     <div class="card-title manager">
-                        <h5>${fullName}</h5>
-                        <p>${object.getRole()}</p>
+                        <h5>${capitolizedName}</h5>
+                        <p>${object.role}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.getId()}</p>
-                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
-                    <p class="card-text">Office #: ${object.getOffice()}</p>
+                    <p class="card-text">ID: ${object.id}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
+                    <p class="card-text">Office #: ${object.office}</p>
                 </div>
               </div>
             </div>`
-        } else if(object.getRole() === 'Engineer') {
+        } else if(object.role === 'Engineer') {
             html += `
                     <div class="card-title engineer">
-                        <h5>${fullName}</h5>
-                        <p>${object.getRole()}</p>
+                        <h5>${capitolizedName}</h5>
+                        <p>${object.role}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.getId()}</p>
-                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
-                    <p class="card-text">Github: <a class="link" href="https://github.com/${object.getGithub()}" target="_blank">${object.getGithub()}</a></p>
+                    <p class="card-text">ID: ${object.id}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
+                    <p class="card-text">Github: <a class="link" href="https://github.com/${object.github}" target="_blank">${object.github}</a></p>
                 </div>
               </div>
             </div>`
-        } else if(object.getRole() === 'Intern') {
+        } else if(object.role === 'Intern') {
+            var capitolizedSchool = object.school.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
             html += `
                     <div class="card-title intern">
-                        <h5>${fullName}</h5>
-                        <p>${object.getRole()}</p>
+                        <h5>${capitolizedName}</h5>
+                        <p>${object.role}</p>
                     </div> 
-                    <p class="card-text">ID: ${object.getId()}</p>
-                    <p class="card-text">Email: <a class="link" href="mailto:${object.getEmail()}" target="_blank">${object.getEmail()}</a></p>
-                    <p class="card-text">School: ${object.getSchool()}</p>
+                    <p class="card-text">ID: ${object.id}</p>
+                    <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
+                    <p class="card-text">School: ${capitolizedSchool}</p>
                 </div>
               </div>
             </div>`

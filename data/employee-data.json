@@ -1,8 +1,16 @@
 [
     {
+        "name": "reade webb",
+        "id": "1542",
+        "email": "reade@gmail.com",
+        "role": "Manager",
+        "office": "123"
+    },
+    {
         "name": "madeline donley",
-        "id": "87524",
-        "email": "madelineadonley@gmail.com",
+        "id": "5361",
+        "email": "madeline@gmail.com",
+        "role": "Engineer",
         "github": "mado8"
     }
 ]

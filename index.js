@@ -4,7 +4,8 @@ const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const createHTML = require('./script/employeeHTML');
-const myEmployees = require('./script/employee-array');
+var myEmployees = require('./script/employee-array');
+console.log('\n✩ -- My current team! -- ✩\n');
 console.log(myEmployees);
 
 // import inquirer
@@ -103,7 +104,7 @@ function internInfoPrompt() {
     inquirer.prompt(internInfo).then((answers) => {
         // invoke manager class with inputs
         myIntern = new Intern(answers.name, answers.id, answers.email, answers.school);
-        myEmployees.push(myIntern);
+        myEmployees.push(myIntern)
         // prompt myTeam/continue function
         myTeamPrompt();
     }).catch((error) => {
@@ -172,7 +173,8 @@ function myTeamPrompt() {
 function buildTeamPrompt() {
     inquirer.prompt(buildTeam).then((answers) => {
         if(answers.team === '✩ build a new team! ✩') {
-            fs.writeFile('./data/employee-data.json', '')
+            myEmployees = [];
+            fs.writeFile('./data/employee-data.json', '', function(){console.log('done')})
             chooseRolePrompt()
         } else if (answers.team === '✩ continue building team ✩'){
             chooseRolePrompt();
