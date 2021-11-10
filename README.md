@@ -32,6 +32,7 @@ https://user-images.githubusercontent.com/88465484/141023108-19a91e36-4d7d-4450-
 ## Usage
 To launch the app, navigate to index.js within the terminal and type "node index.js". You will then be prompted with a series of questions. When finished, navigate into the dist folder, and open index.html in your browser to see the results!
 
+https://user-images.githubusercontent.com/88465484/141063749-9c8a0e6f-a96f-443f-abf3-7cba8ed28993.mov
 
 ## Tests 
 To run these tests, you may need to install Jest. Type "npm i jest" into your terminal to install, and "npm test" to proceed with testing.
