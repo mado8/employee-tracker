@@ -44,7 +44,7 @@ https://user-images.githubusercontent.com/88465484/141018722-9856a8cb-d9b0-46d2-
 This project is licensed under MIT.  
 
 ## Link
-Link to live url: 
+Link to live url: https://mado8.github.io/employee-tracker/
 
 ## Questions
 
