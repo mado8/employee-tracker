@@ -22,23 +22,37 @@
     },
     {
         "name": "Employee 4",
-        "id": "223",
+        "id": "224",
         "email": "intern@gmail.com",
         "role": "Intern",
         "school": "my school"
     },
     {
         "name": "Employee 5",
-        "id": "222",
+        "id": "225",
         "email": "engineer@gmail.com",
         "role": "Engineer",
         "github": "engineer123"
     },
     {
         "name": "Employee 6",
-        "id": "221",
+        "id": "226",
         "email": "manager@gmail.com",
         "role": "Manager",
         "office": "123"
+    },
+    {
+        "name": "Employee 7",
+        "id": "227",
+        "email": "manager@gmail.com",
+        "role": "Manager",
+        "office": "123"
+    },
+    {
+        "name": "Employee 8",
+        "id": "228",
+        "email": "engineer@gmail.com",
+        "role": "Engineer",
+        "github": "engineer123"
     }
 ]
