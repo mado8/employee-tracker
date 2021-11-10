@@ -34,7 +34,7 @@ body {
     min-height: 500px;
 }
 
-.navbar {
+.header-top {
     background-color: var(--navbar-color);
     position: fixed;
     width: 100%;
@@ -42,25 +42,21 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     transition: .5s;
     height: 150px;
     z-index: 500;
 }
 
-.navbar-scroll {
+.header-scroll {
     height: 70px;
     transition: .5s;
     opacity: 75%;
 }
 
-.navbar-text {
-    text-align: center;
+.header-text {
     font-size: 2em;
-}
-
-#header-title {
-    font-size: 4vh;
 }
 
 #card-containers {
@@ -89,6 +85,10 @@ body {
     color: white;
     padding: 20px;
     border-radius: 6px 6px 0px 0px;
+}
+
+.card-title h3 {
+    font-size: 1.25em;
 }
 
 .manager {

@@ -12,10 +12,10 @@ var roleHTML = (myEmployees) => {
                 <div class="card-body">`
         if(object.role === 'Manager') {
             html += `
-                    <div class="card-title manager">
-                        <h5>${capitolizedName}</h5>
-                        <p>${object.role}</p>
-                    </div> 
+                  <div class="card-title manager">
+                    <h3>${capitolizedName}</h3>
+                    <p>${object.role}</p>
+                  </div> 
                     <p class="card-text">ID: ${object.id}</p>
                     <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
                     <p class="card-text">Office #: ${object.office}</p>
@@ -24,10 +24,10 @@ var roleHTML = (myEmployees) => {
             </div>`
         } else if(object.role === 'Engineer') {
             html += `
-                    <div class="card-title engineer">
-                        <h5>${capitolizedName}</h5>
-                        <p>${object.role}</p>
-                    </div> 
+                  <div class="card-title engineer">
+                    <h3>${capitolizedName}</h3>
+                    <p>${object.role}</p>
+                  </div> 
                     <p class="card-text">ID: ${object.id}</p>
                     <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
                     <p class="card-text">Github: <a class="link" href="https://github.com/${object.github}" target="_blank">${object.github}</a></p>
@@ -37,10 +37,10 @@ var roleHTML = (myEmployees) => {
         } else if(object.role === 'Intern') {
             var capitolizedSchool = object.school.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
             html += `
-                    <div class="card-title intern">
-                        <h5>${capitolizedName}</h5>
-                        <p>${object.role}</p>
-                    </div> 
+                  <div class="card-title intern">
+                    <h3>${capitolizedName}</h3>
+                    <p>${object.role}</p>
+                  </div> 
                     <p class="card-text">ID: ${object.id}</p>
                     <p class="card-text">Email: <a class="link" href="mailto:${object.email}" target="_blank">${object.email}</a></p>
                     <p class="card-text">School: ${capitolizedSchool}</p>
@@ -56,6 +56,7 @@ var baseHTML = (myEmployees) => {
     html = `
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,12 +68,11 @@ var baseHTML = (myEmployees) => {
         <link rel="stylesheet" href="./style/style.css">
         <title>My Team</title>
     </head>
+
     <body>
-        <nav class="navbar" id="nav-sticky">
-            <span class="navbar-text">
-            my ✩ team
-            </span>
-        </nav>
+        <header class="header-top" id="header-sticky">
+          <span class="header-text">my ✩ team</span>
+        </header>
         
         <div id="card-containers">
           <div class="row">`;
@@ -80,7 +80,7 @@ var baseHTML = (myEmployees) => {
     roleHTML(myEmployees);
 
     html += `
-            </div>
+          </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

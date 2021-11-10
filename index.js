@@ -5,8 +5,6 @@ const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const createHTML = require('./script/employeeHTML');
 var myEmployees = require('./script/employee-array');
-console.log('\n✩ -- My current team! -- ✩\n');
-console.log(myEmployees);
 
 // import inquirer
 const inquirer = require('inquirer');
@@ -174,7 +172,7 @@ function buildTeamPrompt() {
     inquirer.prompt(buildTeam).then((answers) => {
         if(answers.team === '✩ build a new team! ✩') {
             myEmployees = [];
-            fs.writeFile('./data/employee-data.json', '', function(){console.log('done')})
+            fs.writeFile('./data/employee-data.json', '', function(){})
             chooseRolePrompt()
         } else if (answers.team === '✩ continue building team ✩'){
             chooseRolePrompt();

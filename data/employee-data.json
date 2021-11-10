@@ -1,16 +1,23 @@
 [
     {
-        "name": "reade webb",
-        "id": "1542",
-        "email": "reade@gmail.com",
+        "name": "Employee 1",
+        "id": "221",
+        "email": "manager@gmail.com",
         "role": "Manager",
         "office": "123"
     },
     {
-        "name": "madeline donley",
-        "id": "5361",
-        "email": "madeline@gmail.com",
+        "name": "Employee 2",
+        "id": "222",
+        "email": "engineer@gmail.com",
         "role": "Engineer",
-        "github": "mado8"
+        "github": "engineer123"
+    },
+    {
+        "name": "Employee 3",
+        "id": "223",
+        "email": "intern@gmail.com",
+        "role": "Intern",
+        "school": "my school"
     }
 ]
